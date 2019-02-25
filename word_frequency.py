@@ -15,7 +15,7 @@ document = open('seneca_falls.txt', 'r')
 # opening the seneca_falls.txt and 'r' reads the file, also asigning the file to a variable.
 text_string = document.read().lower()
 # creating a new variable to to asign the document value to it, the .read() reads the file and the .lower() makes the words in the
-# in the document.
+# in the document lower case.
 find_word = re.findall(r'\b[a-z]{3,15}\b', text_string)
 # filtering out the words in the text_string variable
 
@@ -23,10 +23,10 @@ find_word = re.findall(r'\b[a-z]{3,15}\b', text_string)
 # for words in STOP_WORDS:
 #     if words =! '' and
 stop = []
-for itmes in STOP_WORDS:
+for itmes in document:
     if itmes != '' and find_word not in STOP_WORDS:
-        stop.append(stop)
-        # print(words)
+        stop.append(find_word)
+        print(STOP_WORDS)
         # return words
     # down below this is going to count every word in the Seneca_falls.txt and filter out the STOP WORDS!
 for word in find_word:
